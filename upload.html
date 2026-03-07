@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Technical Drawings | Enissen Manufacturing</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        .upload-container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--light-grey);
+        }
+
+        .upload-card {
+            background: var(--white);
+            padding: 4rem;
+            border-radius: 30px;
+            box-shadow: var(--shadow-heavy);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .drop-zone {
+            border: 2px dashed var(--border-color);
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .drop-zone:hover {
+            border-color: var(--accent-blue);
+            background-color: rgba(0, 122, 255, 0.05);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: var(--text-main);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="upload-container">
+        <div class="upload-card">
+            <h2>Upload Your Drawings</h2>
+            <p>Supported formats: PDF, DWG, STEP, DXF</p>
+
+            <div class="drop-zone" id="drop-zone">
+                <p>Drag & Drop files here or <strong>Browse</strong></p>
+                <input type="file" id="file-input" hidden multiple>
+            </div>
+
+            <button class="submit-btn"
+                onclick="alert('Files uploaded successfully! Our team will review them and get back to you.')">Confirm
+                Upload</button>
+            <br>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+
+        dropZone.onclick = () => fileInput.click();
+
+        dropZone.ondragover = (e) => {
+            e.preventDefault();
+            dropZone.style.borderColor = 'var(--accent-blue)';
+        };
+
+        dropZone.ondragleave = () => {
+            dropZone.style.borderColor = 'var(--border-color)';
+        };
+
+        dropZone.ondrop = (e) => {
+            e.preventDefault();
+            dropZone.style.borderColor = 'var(--border-color)';
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                alert(`${files.length} file(s) selected for upload.`);
+            }
+        };
+
+        fileInput.onchange = () => {
+            if (fileInput.files.length > 0) {
+                alert(`${fileInput.files.length} file(s) selected for upload.`);
+            }
+        };
+    </script>
+</body>
+
+</html>

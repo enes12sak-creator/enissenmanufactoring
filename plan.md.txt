@@ -1,0 +1,37 @@
+Prompt:
+
+"Create a high-end, corporate, and minimalist one-page (or multi-section) website for 'Enissen Manufacturing', a high-precision CNC machining company.
+
+Design Aesthetic:
+
+Follow Apple’s design language: Use plenty of white space, clean typography (San Francisco style fonts), and soft grey shadows.
+
+Use a premium color palette: Pure White (#FFFFFF), Space Grey (#1F1F1F), and an accent Blue/Green for status indicators (like the lights on a CNC machine).
+
+Use high-quality placeholders for Swiss-type CNC machines (specifically Star SR-32JIII) and macro shots of tiny, high-precision metal parts (Medical & Automotive).
+
+Website Structure & Content (All in English):
+
+Navigation: Home, Services, Machine Park, Quality, Contact.
+
+Hero Section: Headline: 'Precision in Every Micron.' Sub-headline: 'Leading-edge Swiss-type CNC solutions for Medical and Automotive industries. 32mm max capacity, infinite possibilities.' Call to Action: 'Request a Quote'.
+
+The Powerhouse (Machine Park): Feature the Star SR-32JIII. Highlight technical specs: 32mm diameter capacity, high-speed Swiss-type turning, and multi-axis precision.
+
+Expertise: Two distinct cards for 'Medical Grade Components' (Titanium, Stainless) and 'Automotive Solutions' (Sensors, Fuel Systems).
+
+Technical Drawing to Reality: A section explaining: 'Send us your technical drawings (PDF/DWG/STEP). We deliver the perfect physical component.'
+
+Quality & Compliance: Mention ISO 13485 and IATF 16949 readiness.
+
+Footer: Include professional links for 'Terms of Service', 'Privacy Policy (GDPR/KVKK Compliance)', and 'Cookie Policy'.
+
+Technical Requirements:
+
+Ensure the layout is fully responsive (Mobile/Desktop).
+
+Use modern CSS Grid/Flexbox.
+
+Make the UI feel 'engineered' and 'robotic' yet 'elegant'.
+
+Include a sleek contact form at the bottom."

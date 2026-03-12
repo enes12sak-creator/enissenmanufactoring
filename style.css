@@ -848,10 +848,13 @@ footer {
         height: 100vh;
         background-color: var(--white);
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        transition: right 0.4s ease;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 999;
+        gap: 2rem; /* Override desktop gap */
+        padding-top: 120px; /* Space for the header */
+        overflow-y: auto; /* Prevent cut-off on small screens */
     }
 
     .nav-links.nav-active {
@@ -859,7 +862,7 @@ footer {
     }
 
     .nav-links li {
-        margin: 1.5rem 0;
+        margin: 0; /* Removing the huge margin which compounded with gap */
     }
     
     .nav-links a {

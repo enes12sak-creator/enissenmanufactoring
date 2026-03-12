@@ -43,6 +43,11 @@
                     <li><a href="#contact" class="btn-primary">Contact</a></li>
                 </ul>
             </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -305,6 +310,26 @@
         // Observe all sections for themes, and reveal elements for animations
         document.querySelectorAll('section[id], .reveal').forEach((el) => {
             observer.observe(el);
+        });
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            mobileMenuBtn.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                if (navLinks.classList.contains('nav-active')) {
+                    navLinks.classList.remove('nav-active');
+                    mobileMenuBtn.classList.remove('active');
+                }
+            });
         });
     </script>
 </body>

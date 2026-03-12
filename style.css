@@ -813,7 +813,9 @@ footer {
 
     .machine-grid,
     .expertise-grid,
-    .process-grid {
+    .process-grid,
+    .contact-card,
+    .form-row {
         grid-template-columns: 1fr;
     }
 
@@ -827,7 +829,12 @@ footer {
     }
 
     .contact-card {
-        padding: 3rem 2rem;
+        padding: 2.5rem 1.5rem;
+        gap: 2.5rem;
+    }
+
+    .contact-right {
+        padding: 1.5rem;
     }
 
     .step-card {
